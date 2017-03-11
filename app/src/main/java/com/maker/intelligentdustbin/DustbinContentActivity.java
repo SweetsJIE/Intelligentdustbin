@@ -145,6 +145,7 @@ public class DustbinContentActivity extends Activity {
         });
         // 第一个参数表示一个Latlng(经纬度)，第二参数表示范围多少米，第三个参数表示是火系坐标系还是GPS原生坐标系
 
+
         //double latitude = Double.parseDouble(latitude_buf);
         //double longitude = Double.parseDouble(longitude_buf);
         //LatLonPoint lp =new LatLonPoint(latitude,longitude);
