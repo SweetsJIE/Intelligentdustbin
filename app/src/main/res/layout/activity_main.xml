@@ -9,4 +9,5 @@
     <include layout="@layout/custom_toolbar" />
     <!--DrawerLayout-->
     <include layout="@layout/custom_drawerlayout" />
+
 </LinearLayout>

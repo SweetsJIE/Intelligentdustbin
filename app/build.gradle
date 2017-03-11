@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "com.maker.intelligentdustbin"
-        minSdkVersion 24
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,13 +17,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
     testCompile 'junit:junit:4.12'
+    compile files('libs/AMap_Location_V3.3.0_20170118.jar')
+    compile files('libs/Amap_2DMap_V3.0.0_20161227.jar')
+    compile files('libs/AMap_Search_V3.6.1_20161122.jar')
+    compile files('libs/json-lib-2.2.2-jdk15.jar')
+    compile files('libs/commons-beanutils-1.7.0.jar')
+    compile files('libs/commons-collections-3.2.jar')
+    compile files('libs/ezmorph-1.0.4.jar')
+    compile files('libs/commons-lang-2.4.jar')
+    compile files('libs/commons-logging-1.1.jar')
 }

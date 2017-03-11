@@ -29,7 +29,12 @@ public class SideListViewAdapter extends ArrayAdapter<Dustbin_icon> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Dustbin_icon dustbin_icon  = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
+        View view;
+        if (convertView == null) {
+            view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+        } else {
+            view = convertView;
+        }
         ImageView imageView = (ImageView) view.findViewById(R.id.dustbin_image);
         TextView textView = (TextView) view.findViewById(R.id.dustbin_number);
         imageView.setImageResource(dustbin_icon.getImageId());
