@@ -190,6 +190,7 @@ public class DustbinContentActivity extends Activity {
         }
     };
 
+
     //WebService线程
     private void getInformation() {
         new Thread(new Runnable() {
